@@ -1,0 +1,26 @@
+1)pip install mysqlclient
+2)set DJANGO_SETTINGS_MODULE=student_management_system.settings
+3)pip install mysql-connector-python
+###################################
+On command line 
+
+1)create database student_management_system
+2)create user 'student_management_system'@'localhost' identified by 'student_management_password';
+3)grant all privileges on *.* to 'student_management_system'@'localhost';
+
+
+Postgres:
+
+1] pip install psycopg2
+2] (taking backup of dbsqlite) python manage.py dumpdata > data.json
+3] ( syncing up data ) python manage.py migrate --run-syncdb
+4] python manage.py shell
+		>>> from django.contrib.contenttypes.models import ContentType
+		>>> ContentType.objects.all().delete()
+		(110, {'auth.Permission': 88, 'contenttypes.ContentType': 22})
+		>>> exit()
+] python manage.py loaddata data.json
+5] python manage.py runserver
+
+ 
+4] 

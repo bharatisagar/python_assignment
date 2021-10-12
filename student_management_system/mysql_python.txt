@@ -1,0 +1,9 @@
+1)pip install mysqlclient
+2)set DJANGO_SETTINGS_MODULE=student_management_system.settings
+3)pip install mysql-connector-python
+###################################
+On command line 
+
+1)create database student_management_system
+2)create user 'student_management_system'@'localhost' identified by 'student_management_password';
+3)grant all privileges on *.* to 'student_management_system'@'localhost';
